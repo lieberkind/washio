@@ -1,0 +1,18 @@
+{
+    "name": "lieberkind/washio",
+    "description": "A small app for listing washing times in local laundromat",
+    "require": {
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "Tomas Lieberkind",
+            "email": "t.lieberkind@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Washio\\": "Washio/"
+        }
+    }
+}
