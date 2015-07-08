@@ -10,8 +10,6 @@
     $nr25Username = getenv('NR_25_USERNAME');
     $nr25Password = getenv('NR_25_PASSWORD');
 
-    die($nr25Password);
-
     $number17->login($nr17Username, $nr17Password);
     $number25->login($nr25Username, $nr25Password);
 
