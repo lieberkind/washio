@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Yellowtail);
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -61,11 +63,11 @@ body {
 }
 
 .title {
-    font-size: 3.529411765em; /* 50px */
-    font-weight: bold;
-    margin: 0 auto 0.8em;
+    font-family: 'Yellowtail', cursive;
+    font-size: 6.25em; /* 50px */
+    margin: 0 auto 0.4em;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: lowercase;
 }
 
 .title .io {
