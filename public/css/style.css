@@ -52,13 +52,15 @@ table {
 /**
  * OWN STYLES FROM NOW ON
  */
-body {
+html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 10px;
 }
 
 .container {
     font-size: 1.6em;
+    margin: 0 auto;
+    max-width: 87.5em;
     padding: 1.875em;
 }
 
@@ -89,7 +91,6 @@ body {
     display: block;
     font-size: 1.5em;
     margin: 0 auto 3.333333334em;
-    max-width: 58.333333333em;
     width: 100%;
 }
 
@@ -124,6 +125,12 @@ body {
 .reservation-links li a {
     color: #00D652;
     text-decoration: none;
+}
+
+@media screen and (min-width: 641px) {
+    html {
+        font-size: 0.5em;
+    }
 }
 
 
