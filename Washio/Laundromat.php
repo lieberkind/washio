@@ -103,6 +103,49 @@ class Laundromat
     }
 
     /**
+     * Get the next 15 available times
+     *
+     * @return array
+     */
+    public function getNextAvailableTimes()
+    {
+        $response = $this->http->get('Reservation.asp?Mode=Soeg');
+
+        $dom = new \DOMDocument;
+
+        // Helps to ignore misformed HTML
+        libxml_use_internal_errors(true);
+
+        $dom->loadHTML((string) $response->getBody());
+
+        $tables = $dom->getElementsByTagName('table');
+
+        $table = $tables->item($tables->length - 1);
+
+        $rows = $table->getElementsByTagName('tr');
+
+        $times = [];
+
+        foreach ($rows as $index => $row) {
+            if($index > 1) {
+
+                $tds = iterator_to_array($row->getElementsByTagName('td'));
+
+                $dateString = $this->getStrippedString($tds[0]->textContent);
+                $timeString = str_replace("Kl. ", "", $this->getStrippedString($tds[2]->textContent));
+
+                $timeString = $timeString === '07:0' ? '07:00' : $timeString;
+
+                $time = \DateTime::createFromFormat('d/m-Y H:i', "$dateString $timeString");
+
+                $times[] = new Wash($time, $this->location);
+            }
+        }
+
+        return $times;
+    }
+
+    /**
      * Get the washing times for the specified date
      *
      * @param  string $date

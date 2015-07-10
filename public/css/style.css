@@ -74,12 +74,21 @@ body {
     color: #00D652;
 }
 
+.table-title {
+    background: #000;
+    color: #00D652;
+    display: inline-block;
+    font-size: 1.875em; /* 30px */
+    margin-bottom: .666666667em;
+    padding: .166666667em;
+}
+
 .times {
     border: 1px solid #ccc;
     border-collapse: collapse;
     display: block;
     font-size: 1.5em;
-    margin: 0 auto 1.666666667em;
+    margin: 0 auto 3.333333334em;
     max-width: 58.333333333em;
     width: 100%;
 }
@@ -116,7 +125,6 @@ body {
     color: #00D652;
     text-decoration: none;
 }
-
 
 
 

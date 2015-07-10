@@ -16,10 +16,19 @@
     $times17 = $number17->getOwnWashingTimes();
     $times25 = $number25->getOwnWashingTimes();
 
+    $number17AvailableTimes = $number17->getNextAvailableTimes();
+    $number25AvailableTimes = $number25->getNextAvailableTimes();
+
     $times = array_merge($times17, $times25);
+    $availableTimes = array_merge($number17AvailableTimes, $number25AvailableTimes);
 
     // Sort the washing times so they appear in ascending order
     usort($times, function($time1, $time2) {
+        return $time1->getTime() > $time2->getTime();
+    });
+
+    // Sort the next available washing times so they appear in ascending order
+    usort($availableTimes, function($time1, $time2) {
         return $time1->getTime() > $time2->getTime();
     });
 
