@@ -108,7 +108,7 @@ body {
 
 .times td .day-of-week {
     color: #666;
-    font-size: 0.666666667em;
+    /*font-size: 0.666666667em;*/
     text-transform: lowercase;
 }
 

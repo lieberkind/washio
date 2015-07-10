@@ -16,6 +16,7 @@
                 <thead>
                     <tr>
                         <th>Date</th>
+                        <th>Day</th>
                         <th>Time</th>
                         <th>Location</th>
                     </tr>
@@ -26,7 +27,9 @@
                         <tr class="time">
                             <td>
                                 <?= $time->getTime()->format('d/m-Y'); ?>
-                                <span class="day-of-week">(<?= $time->getTime()->format('l'); ?>)</span>
+                            </td>
+                            <td>
+                                <?= $time->getTime()->format('l'); ?>
                             </td>
                             <td>
                                 <?= $time->getTime()->format('H:i'); ?>
@@ -49,6 +52,7 @@
             <thead>
                 <tr>
                     <th>Date</th>
+                    <th>Day</th>
                     <th>Time</th>
                     <th>Location</th>
                     <th>Actions</th>
@@ -60,7 +64,9 @@
                     <tr class="time">
                         <td>
                             <?= $time->getTime()->format('d/m-Y'); ?>
-                            <span class="day-of-week">(<?= $time->getTime()->format('l'); ?>)</span>
+                        </td>
+                        <td>
+                            <?= $time->getTime()->format('l'); ?>
                         </td>
                         <td>
                             <?= $time->getTime()->format('H:i'); ?>
