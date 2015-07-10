@@ -56,7 +56,6 @@
                     <th>Day</th>
                     <th>Time</th>
                     <th>Location</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
 
@@ -75,8 +74,6 @@
                         <td>
                             <?= $time->getLocation() ?>
                         </td>
-
-                        <td>Book this time</td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
