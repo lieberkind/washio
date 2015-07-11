@@ -44,7 +44,7 @@
             </table>
 
         <?php else: ?>
-            <p>There are currently no reservations</p>
+            <p class="no-reservations">There are currently no reservations</p>
         <?php endif; ?>
 
         <h2 class="table-title">Next 30 available washing times</h2>

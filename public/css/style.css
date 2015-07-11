@@ -90,8 +90,8 @@ html {
     border: 1px solid #ccc;
     border-collapse: collapse;
     display: block;
-    font-size: 1.5em;
-    margin: 0 auto 3.333333334em;
+    font-size: 1.5em; /* 24px */
+    margin: 0 auto 3.333333334em; /* 80px */
     width: 100%;
 }
 
@@ -114,8 +114,15 @@ html {
     text-transform: lowercase;
 }
 
+.no-reservations {
+    color: #666;
+    font-size: 1.875em; /* 30px */
+    font-style: italic;
+    margin-bottom: 2.666666667em;
+}
+
 .reservation-links {
-    font-size: 1.875em;
+    font-size: 1.875em; /* 30px */
 }
 
 .reservation-links li {
